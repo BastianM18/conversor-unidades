@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       case "C": // Celsius
           switch (toUnit) {
               case "F":
-                  result = (value * 9 / 5) + 32;
+                  result = (value * 9 / 4) + 32;
                   break;
               case "K":
                   result = value + 273.15;
