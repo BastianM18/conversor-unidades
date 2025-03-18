@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("weight-unit-to").value = "g";
   
       // Limpiar el resultado mostrado
-      document.querySelector("#weight-form .result").textContent = "Resultado:";
+      document.Selector("#weight-form .result").textContent = "Resultado:";
     });
   });
 });
