@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Unidades</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace Font Awesome (para íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Convertidor de unidades</h1>
+  </header>
+  <!-- main -->
+  <main>
+    <!-- Información de inicio de la página -->
+    <section class="intro">
+      <h2>Conversión rápida</h2>
+      <hr class="linea">
+      <p>Nuestra herramienta de conversión de unidades es una herramienta en línea simple que permite convertir entre distintas unidades de peso, distancia y temperatura. En este sitio usted podrá introducir valores, seleccionar las unidades de origen y destino, y obtener resultados instantáneos.</p>
+    </section>
+
+    <!-- Convertidores de unidades -->
+    <section class="converters">
+
+      <!-- Conversión de Temperatura -->
+      <div class="converter">
+        <h3>Temperatura</h3>
+        <form id="temperature-form">
+          <label for="temperature-input">Quiero Convertir:</label>
+          <input type="text" id="temperature-input" placeholder="0">
+          <select id="temperature-unit-from">
+            <option value="C">Grados Celsius (°C)</option>
+            <option value="F">Grados Fahrenheit (°F)</option>
+            <option value="K">Kelvin (°K)</option>
+            <option value="R">Rankine (°R)</option>
+          </select>
+          <label for="temperature-unit-to">A:</label>
+          <select id="temperature-unit-to">
+            <option value="C">Grados Celsius (°C)</option>
+            <option value="F">Grados Fahrenheit (°F)</option>
+            <option value="K">Kelvin (°K)</option>
+            <option value="R">Rankine (°R)</option>
+          </select>
+          <button type="submit">Convertir</button>
+          <div class="result">Resultado:</div>
+          <!-- icono de reinicio Font Awesome -->
+          <i id="reset-temp-icon" class="fas fa-sync-alt" title="Reiniciar"></i>
+        </form>
+      </div>
+      
+      <!-- Conversión de Distancia -->
+      <div class="converter">
+        <h3>Distancia</h3>
+        <form id="distance-form">
+          <label for="distance-input">Quiero Convertir:</label>
+          <input type="text" id="distance-input" placeholder="0">
+          <select id="distance-unit-from">
+            <option value="km">Kilómetros (km)</option>
+            <option value="hm">Hectómetros (hm)</option>
+            <option value="dam">Decámetros (dam)</option>
+            <option value="m">Metros (m)</option>
+            <option value="dm">Decímetros (dm)</option>
+            <option value="cm">Centímetros (cm)</option>
+            <option value="mm">Milímetros (mm)</option>
+          </select>
+          <label for="distance-unit-to">A:</label>
+          <select id="distance-unit-to">
+            <option value="km">Kilómetros (km)</option>
+            <option value="hm">Hectómetros (hm)</option>
+            <option value="dam">Decámetros (dam)</option>
+            <option value="m">Metros (m)</option>
+            <option value="dm">Decímetros (dm)</option>
+            <option value="cm">Centímetros (cm)</option>
+            <option value="mm">Milímetros (mm)</option>
+          </select>
+          <button type="submit">Convertir</button>
+          <div class="result">Resultado:</div>
+          <!-- icono de reinicio Font Awesome -->
+          <i id="reset-dist-icon" class="fas fa-sync-alt" title="Reiniciar"></i>
+        </form>
+      </div>
+
+      <!-- Conversión de Peso -->      
+      <div class="converter">
+        <h3>Peso</h3>
+        <form id="weight-form">
+          <label for="weight-input">Quiero Convertir:</label>
+          <input type="text" id="weight-input" placeholder="0">
+          <select id="weight-unit-from">
+            <option value="kg">Kilogramos (kg)</option>
+            <option value="hg">Hectógramos (hg)</option>
+            <option value="dag">Decagramos (dag)</option>
+            <option value="g">Gramos (g)</option>
+            <option value="dg">Decigramos (dg)</option>
+            <option value="cg">Centigramos (cg)</option>
+            <option value="mg">Miligramos (mg)</option>
+          </select>
+          <label for="weight-unit-to">A:</label>
+          <select id="weight-unit-to">
+            <option value="kg">Kilogramos (kg)</option>
+            <option value="hg">Hectógramos (hg)</option>
+            <option value="dag">Decagramos (dag)</option>
+            <option value="g">Gramos (g)</option>
+            <option value="dg">Decigramos (dg)</option>
+            <option value="cg">Centigramos (cg)</option>
+            <option value="mg">Miligramos (mg)</option>
+          </select>
+          <button type="submit">Convertir</button>
+          <div class="result">Resultado:</div>
+          <!-- icono de reinicio Font Awesome -->
+          <i id="reset-peso-icon" class="fas fa-sync-alt" title="Reiniciar"></i>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Guía para usar el convertidor de unidades -->
+    <section class="instructions">
+      <h2>¿Cómo funciona el conversor de unidades?</h2>
+      <ol>
+        <li><b>Ubiquese en el cuadro de unidad:</b> Podrá notar que hay 3 cuadros grandes en donde podrá realizar las distintas converciones de unidades, debe ubicarse en el cuadro que desee dependiendo de la unidad en la cual desea realizar una conversión.
+        </li>
+        <li><b>Ingrese el valor a convertir:</b> Justo debajo del cuadro en donde está el titulo de la unidad, encontrará un campo para introducir el valor numérico que deseas convertir.</li>
+        <li><b>Seleccione la unidad de origen:</b> Después de introducir el valor, encontrará un campo para seleccionar la unidad del valor que desea convertir.</li>
+        <li><b>Seleccionar unidad de destino:</b> Después de seleccionar la unidad de origen, encontrará otro campo para seleccionar la unidad a la cual desea convertir la unidad de origen.</li>
+        <li><b>Hacer clic en el botón convertir:</b> Una vez ingresado todos los datos, deberá hacer clic en el botón “Convertir”, podrá ver en el cuadro ubicado bajo el texto “resultado” el resultado de la conversión.</li>
+      </ol>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
