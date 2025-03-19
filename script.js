@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   result = value * 100;
                   break;
               case "mg": // Gramos a miligramos
-                  result = value * 1000;
+                  result = value * 100;
                   break;
 
               default:
