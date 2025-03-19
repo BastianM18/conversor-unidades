@@ -264,7 +264,6 @@ document.addEventListener("DOMContentLoaded", () => {
   return result;
 }
 
-
  // Función para convertir peso
  function convertWeight(value, fromUnit, toUnit) {
   let result;
@@ -452,7 +451,6 @@ document.addEventListener("DOMContentLoaded", () => {
       default:
           result = value; // Por defecto no hay conversión
   }
-
   return result;
 }
 
@@ -482,8 +480,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   });
-
-  
 
   // Función para manejar el formulario de distancia
   document.getElementById("distance-form").addEventListener("submit", (event) => {
@@ -534,8 +530,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ERROR 7 der: Al cambiar la unidad, el valor se borra y se reemplaza por 0 
-document.getElementById("temperature-unit-from").addEventListener("change", () => {  
+  document.getElementById("temperature-unit-from").addEventListener("change", () => {  
   document.getElementById("temperature-input").value = "0";  
 });
 
@@ -546,5 +541,4 @@ document.getElementById("distance-unit-from").addEventListener("change", () => {
 document.getElementById("weight-unit-from").addEventListener("change", () => {  
   document.getElementById("weight-input").value = "0";  
 });
-
 });

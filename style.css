@@ -94,6 +94,7 @@ input, select, button {
     color: #357ab9;
     margin-bottom: 10px;
 }
+
 button {
     background: #4a90e2;
     color: white;
@@ -135,7 +136,7 @@ button:hover {
     margin-bottom: 1.5rem;
     line-height: 1.2; 
 }
+
 .linea{
     border-top: 2px solid #357ab9; 
 }
-
