@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
  // Función para convertir temperatura
  function convertTemperature(value, fromUnit, toUnit) {
   let result;
-
+  setTimeout(() => {  // ⬅️ Se agrega el retraso aquí
   switch (fromUnit) {
       case "C": // Celsius
           switch (toUnit) {
@@ -74,13 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
   }
 
-  return result;
+ // Mostrar el resultado después de 5 segundos
+ document.querySelector("#temperature-form .result").textContent = `Resultado: ${formatResult(result)}`;
+}, 2000);  // ⬅️ Retraso de 5 segundos
 }
 
   // Función para convertir distancia
   function convertDistance(value, fromUnit, toUnit) {
     let result;
-    
+    setTimeout(() => {  // ⬅️ Se agrega el retraso aquí
     switch (fromUnit) {
     case "km": // Kilómetros
       switch (toUnit) {
@@ -261,199 +263,95 @@ document.addEventListener("DOMContentLoaded", () => {
       result = value; // Por defecto no hay conversión
   }
 
-  return result;
+  // Mostrar el resultado después de 5 segundos
+  document.querySelector("#distance-form .result").textContent = `Resultado: ${formatResult(result)}`;
+}, 2000);  // ⬅️ Retraso de 5 segundos
 }
 
+// ERROR: Demora intencional de 10 segundos en la conversión de peso
+function convertWeight(value, fromUnit, toUnit) {
+    let result;
+    setTimeout(() => {  // ⬅️ Se agrega el retraso aquí
+        switch (fromUnit) {
+            case "g": // Gramos
+                switch (toUnit) {
+                    case "kg":
+                        result = value / 1000;
+                        break;
+                    case "hg":
+                        result = value / 100;
+                        break;
+                    case "dag":
+                        result = value / 10;
+                        break;
+                    case "dg":
+                        result = value * 10;
+                        break;
+                    case "cg":
+                        result = value * 100;
+                        break;
+                    case "mg":
+                        result = value * 1000;
+                        break;
+                    default:
+                        result = value; // Misma unidad
+                }
+                break;
+            case "kg": // Kilogramos
+                switch (toUnit) {
+                    case "g":
+                        result = value * 1000;
+                        break;
+                    case "hg":
+                        result = value * 10;
+                        break;
+                    case "dag":
+                        result = value * 100;
+                        break;
+                    case "dg":
+                        result = value * 10000;
+                        break;
+                    case "cg":
+                        result = value * 100000;
+                        break;
+                    case "mg":
+                        result = value * 1000000;
+                        break;
+                    default:
+                        result = value; // Misma unidad
+                }
+                break;
+            case "hg": // Hectógramos
+                switch (toUnit) {
+                    case "g":
+                        result = value * 100;
+                        break;
+                    case "kg":
+                        result = value / 10;
+                        break;
+                    case "dag":
+                        result = value * 10;
+                        break;
+                    case "dg":
+                        result = value * 1000;
+                        break;
+                    case "cg":
+                        result = value * 10000;
+                        break;
+                    case "mg":
+                        result = value * 100000;
+                        break;
+                    default:
+                        result = value; // Misma unidad
+                }
+                break;
+            default:
+                result = value; // Por defecto no hay conversión
+        }
 
- // Función para convertir peso
- function convertWeight(value, fromUnit, toUnit) {
-  let result;
-
-  switch (fromUnit) {
-      case "g": // Gramos
-          switch (toUnit) {
-              case "kg": // Gramos a kilogramos
-                  result = value / 1000;
-                  break;
-              case "hg": // Gramos a libras
-                  result = value / 100;
-                  break;
-              case "dag": // Gramos a decagramos
-                  result = value / 10;
-                  break;
-              case "dg": // Gramos a decigramos
-                  result = value * 10;
-                  break;
-              case "cg": // Gramos a centigramos
-                  result = value * 100;
-                  break;
-              case "mg": // Gramos a miligramos
-                  result = value * 1000;
-                  break;
-
-              default:
-                  result = value; // Misma unidad
-          }
-          break;
-
-      case "kg": // Kilogramos
-          switch (toUnit) {
-              case "g": // Kilogramos a gramos
-                  result = value * 1000;
-                  break;
-              case "hg": // Kilogramos a hectógramos
-                  result = value * 10;
-                  break;
-              case "dag": // Kilogramos a decagramos
-                  result = value * 100;
-                  break;
-              case "dg": // Kilogramos a decigramos
-                  result = value * 10000;
-                  break;
-              case "cg": // Kilogramos a centigramos
-                  result = value * 100000;
-                  break;
-              case "mg": // Kilogramos a miligramos
-                  result = value * 1000000;
-                  break;
-
-              default:
-                  result = value; // Misma unidad
-          }
-          break;
-
-      case "hg": // Hectógramos 
-          switch (toUnit) {
-              case "g": // Hectógramos  a gramos
-                  result = value * 100;
-                  break;
-              case "kg": // Hectógramos a kilogramos
-                  result = value / 10;
-                  break;
-              case "dag": // Hectógramos a decagramos
-                  result = value * 10;
-                  break;
-              case "dg": // Hectógramos a decigramos
-                  result = value * 1000;
-                  break;
-              case "cg": // Hectógramos a centigramos
-                  result = value * 10000;
-                  break;
-              case "mg": // Hectógramos a miligramos
-                  result = value * 100000;
-                  break;
-
-               default:
-                      result = value; // Misma unidad
-              }
-              break;
-
-       case "dag": // Decagramos
-          switch (toUnit) {
-              case "g": // Decagramos a gramos
-                  result = value * 10;
-                  break;
-              case "kg": // Decagramos a kilogramos
-                  result = value / 100;
-                  break;
-              case "hg": // Decagramos a decagramos
-                  result = value / 10;
-                  break;
-              case "dg": // Decagramos a decigramos
-                  result = value * 100;
-                  break;
-              case "cg": // Decagramos a centigramos
-                  result = value * 1000;
-                  break;
-              case "mg": // Decagramos a miligramos
-                  result = value * 10000;
-                  break;
-
-               default:
-                      result = value; // Misma unidad
-              }
-              break;
-
-      case "dg": // Decigramos 
-          switch (toUnit) {
-              case "kg": // Decigramos a kilogramos
-              result = value / 10000;
-              break;
-              case "hg": // Decigramos a hectógramos
-                  result = value / 1000;
-                  break;
-              case "dag": // Decigramos a decagramos
-                  result = value / 100;
-                  break;
-              case "g": // Decigramos a gramos
-                  result = value / 10;
-                  break;
-              case "cg": // Decigramos a centigramos
-                  result = value * 10;
-                  break;
-              case "mg": // Decigramos a miligramos
-                  result = value * 100;
-              break;
-          default:
-              result = value; // Misma unidad
-      }
-      break;
-
-      case "cg": // Centigramos
-          switch (toUnit) {
-              case "kg": // Centigramos a kilogramos
-                  result = value / 100000;
-                  break;
-              case "hg": // Centigramos a hectógramos
-                  result = value / 10000;
-                  break;
-              case "dag": // Centigramos a decagramos
-                  result = value / 1000;
-                  break;
-              case "g": // Centigramos a gramos
-                  result = value / 100;
-                  break;
-              case "dg": // Centigramos a decigramos
-                  result = value / 10;
-                  break;
-              case "mg": // Centigramos a miligramos
-                  result = value * 10;
-                  break;
-              default:
-                  result = value; // Misma unidad
-      }
-      break;
-
-      case "mg": // Miligramos
-          switch (toUnit) {
-              case "kg": // Miligramos a kilogramos
-                  result = value / 1000000;
-                  break;
-              case "hg": // Miligramos a hectógramos
-                  result = value / 100000;
-                  break;
-              case "dag": // Miligramos a decagramos
-                  result = value / 10000;
-                  break;
-              case "g": // Miligramos a gramos
-                  result = value / 1000;
-                  break;
-              case "dg": // Miligramos a decigramos
-                  result = value / 100;
-                  break;
-              case "cg": // Miligramos a centigramos
-                  result = value / 10;
-                  break;
-              default:
-              result = value; // Misma unidad
-      }
-      break;                    
-
-      default:
-          result = value; // Por defecto no hay conversión
-  }
-
-  return result;
+        // Mostrar el resultado después de 10 segundos
+        document.querySelector("#weight-form .result").textContent = `Resultado: ${formatResult(result)}`;
+    }, 10000);  // ⬅️ Retraso de 10 segundos
 }
 
   // Función para manejar el formulario de temperatura
@@ -538,7 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ERROR 7 der: Al cambiar la unidad, el valor se borra y se reemplaza por 0 
+  // ERROR 7 : Al cambiar la unidad, el valor se borra y se reemplaza por 0 
 document.getElementById("temperature-unit-from").addEventListener("change", () => {  
   document.getElementById("temperature-input").value = "0";  
 });
