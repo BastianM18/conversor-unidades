@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value * 1000000;
           break;
         default:
-          result = value;
+          
       }
       break;
 
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value * 100000;
           break;
         default:
-          result = value;
+          
       }
       break;
 
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value * 10000;
           break;
         default:
-          result = value;
+          
       }
       break;
 
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value * 1000;
           break;
         default:
-          result = value;
+          
       }
       break;
 
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value * 100;
           break;
         default:
-          result = value;
+          
       }
       break;
 
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value * 10;
           break;
         default:
-          result = value;
+          
       }
       break;
 
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value / 10;
           break;
         default:
-          result = value;
+          
       }
       break;
 
