@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelector("#temperature-form .result").textContent = `Resultado: ${formatResult(result)}`;
-}, 2000);
+}, 1000);
 }
 
   // Función para convertir distancia
@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
       result = value; // Por defecto no hay conversión
   }
   document.querySelector("#distance-form .result").textContent = `Resultado: ${formatResult(result)}`;
-}, 2000);
+}, 1000);
 }
 
  // Función para convertir peso
@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value; // Por defecto no hay conversión
   }
   document.querySelector("#weight-form .result").textContent = `Resultado: ${formatResult(result)}`;
-}, 5000);  
+}, 3000);  
 }
 
   // Función para manejar el formulario de temperatura
