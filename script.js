@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function formatResult(value) {
     return Number.isInteger(value) ? value : value.toFixed(2);
   }
-
+ 
  // Función para convertir temperatura
  function convertTemperature(value, fromUnit, toUnit) {
   let result;
@@ -537,4 +537,18 @@ document.addEventListener("DOMContentLoaded", () => {
       document.Selector("#weight-form .result").textContent = "Resultado:";
     });
   });
+
+  // ERROR 7 der: Al cambiar la unidad, el valor se borra y se reemplaza por 0 
+document.getElementById("temperature-unit-from").addEventListener("change", () => {  
+  document.getElementById("temperature-input").value = "0";  
+});
+
+document.getElementById("distance-unit-from").addEventListener("change", () => {  
+  document.getElementById("distance-input").value = "0";  
+});
+
+document.getElementById("weight-unit-from").addEventListener("change", () => {  
+  document.getElementById("weight-input").value = "0";  
+});
+
 });
