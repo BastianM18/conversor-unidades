@@ -489,10 +489,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("distance-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const value = parseFloat(document.getElementById("distance-input").value);
-    if (isNaN(value)) {
-      alert("Por favor, ingrese valores válidos.");
-      return;
-    }
     const fromUnit = document.getElementById("distance-unit-from").value;
     const toUnit = document.getElementById("distance-unit-to").value;
 
