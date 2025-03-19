@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       case "C": // Celsius
           switch (toUnit) {
               case "F":
-                  result = (value * 9 / 4) + 32;
+                  result = (value * 9 / 5) + 32;
                   break;
               case "K":
                   result = value + 273.15;
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 result = (value + 273.15) * (9 / 5);
                 break;
               default:
-                  result = value;
+                  
           }
           break;
 
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
           result = value * 10;
           break;
         case "cm": // Metros a centímetros
-          result = value * 100;
+          result = value * 99;
           break;
         case "mm": // Metros a milímetros
           result = value * 1000;
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   result = value * 100;
                   break;
               case "mg": // Gramos a miligramos
-                  result = value * 1000;
+                  result = value * 100;
                   break;
 
               default:
