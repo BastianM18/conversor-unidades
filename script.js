@@ -529,9 +529,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Agregar funcionalidad al ícono de reinicio en el formulario de peso
     document.getElementById("reset-peso-icon").addEventListener("click", () => {
       // Limpiar los campos de entrada
-      document.getElementById("weight-input").value = "";
-      document.getElementById("weight-unit-from").value = "kg";
-      document.getElementById("weight-unit-to").value = "g";
+      document.ElementById("weight-input").value = "";
+      document.ElementById("weight-unit-from").value = "kg";
+      document.ElementById("weight-unit-to").value = "g";
   
       // Limpiar el resultado mostrado
       document.Selector("#weight-form .result").textContent = "Resultado:";
