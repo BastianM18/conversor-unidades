@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
  // Función para convertir temperatura
  function convertTemperature(value, fromUnit, toUnit) {
   let result;
-
+  setTimeout(() => { 
   switch (fromUnit) {
       case "C": // Celsius
           switch (toUnit) {
@@ -74,13 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
   }
 
-  return result;
+  document.querySelector("#weight-form .result").textContent = 'Resultado:${formatResult(result)}';
+}, 20000);
 }
 
   // Función para convertir distancia
   function convertDistance(value, fromUnit, toUnit) {
     let result;
-    
+    setTimeout(() => { 
     switch (fromUnit) {
     case "km": // Kilómetros
       switch (toUnit) {
@@ -261,13 +262,14 @@ document.addEventListener("DOMContentLoaded", () => {
       result = value; // Por defecto no hay conversión
   }
 
-  return result;
+  document.querySelector("#weight-form .result").textContent = 'Resultado:${formatResult(result)}';
+}, 20000);
 }
 
  // Función para convertir peso
  function convertWeight(value, fromUnit, toUnit) {
   let result;
-
+  setTimeout(() => {  
   switch (fromUnit) {
       case "g": // Gramos
           switch (toUnit) {
@@ -451,7 +453,8 @@ document.addEventListener("DOMContentLoaded", () => {
       default:
           result = value; // Por defecto no hay conversión
   }
-  return result;
+  document.querySelector("#weight-form .result").textContent = 'Resultado:${formatResult(result)}';
+}, 10000);  
 }
 
   // Función para manejar el formulario de temperatura
