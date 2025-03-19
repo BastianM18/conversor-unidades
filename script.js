@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
   }
 
-  document.querySelector("#weight-form .result").textContent = 'Resultado:${formatResult(result)}';
+  document.querySelector("#weight-form .result").textContent = `Resultado: ${formatResult(result)}`;
 }, 20000);
 }
 
@@ -261,8 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
     default:
       result = value; // Por defecto no hay conversión
   }
-
-  document.querySelector("#weight-form .result").textContent = 'Resultado:${formatResult(result)}';
+  document.querySelector("#weight-form .result").textContent = `Resultado: ${formatResult(result)}`;
 }, 20000);
 }
 
@@ -453,7 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
       default:
           result = value; // Por defecto no hay conversión
   }
-  document.querySelector("#weight-form .result").textContent = 'Resultado:${formatResult(result)}';
+  document.querySelector("#weight-form .result").textContent = `Resultado: ${formatResult(result)}`;
 }, 10000);  
 }
 
